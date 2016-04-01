@@ -20,7 +20,12 @@ In Python 2, integer division is the default, so 1/2 evaluates to 0. This means 
 	int_two = 2
 	int_one * 1.0 / int_two
 
-In Python 3, the default division will yield a float, and integer division is accessed as int_one // int_two.
+In Python 3, the default division will yield a float, and integer division is accessed using the // operator::
+
+	int_one = 1
+	int_two = 2
+	int_one / int_two # yields 0.5
+	int_one // int_two # yields 0
 
 Unicode variable names
 ----------------------
@@ -30,7 +35,7 @@ As with strings, Python 3 expands variable names to include most Unicode symbols
 	π = 3.14159
 	
 	
-(sadly, no emoji here, though that functionality may be on the horizon...)
+(Sadly, no emoji here, though that functionality may be on the horizon.)
 
 Use caution if you're planning to share your code, though, as it's fairly easy to produce illegible code this way.
 
