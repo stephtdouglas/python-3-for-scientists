@@ -9,30 +9,37 @@ In Python 2, only the basic ASCII character set was available in standard string
         "an ascii string"
 	u"a unicode string 😀"
 
-Unicode strings are the default in Python 3. This makes it more straightforward to e.g., include foreign languages, and print greek symbols (or emoji) in strings and comments.
+Unicode strings are the default in Python 3. This makes it more straightforward to e.g., include foreign languages, and print greek symbols (or emoji) in strings and comments::
+
+	"a unicode string 😍"
+	# représentation unicode
 
 Division
 --------
 
 In Python 2, integer division is the default, so 1/2 evaluates to 0. This means frequently mutiplying by 1.0 when working with integer variables, like so::
 
-	int_one = 1
-	int_two = 2
-	int_one * 1.0 / int_two
+	>>> int_one = 1
+	>>> int_two = 2
+	>>> int_one / int_two 
+	0
+	>>> int_one * 1.0 / int_two 
+	0.5
 
 In Python 3, the default division will yield a float, and integer division is accessed using the // operator::
 
-	int_one = 1
-	int_two = 2
-	int_one / int_two # yields 0.5
-	int_one // int_two # yields 0
+	>>> int_one / int_two 
+	0.5
+	>>> int_one // int_two 
+	0
 
 Unicode variable names
 ----------------------
 
-As with strings, Python 3 expands variable names to include most Unicode symbols, where Python 2 could only use the basic ASCII character set for variable names. This means you can use foreign language words and letter-like symbols as variable names, e.g.::
+As with strings, Python 3 allows most unicode symbols to be used in variable names. In contrast, Python 2 could only use the basic ASCII character set for variable names. This means you can use foreign language words and letter-like symbols as variable names, e.g.::
 
-	π = 3.14159
+	>>> π = 3.14159
+	>>> jalapeño = "a hot pepper"
 	
 (Sadly, no emoji here, though that functionality may be on the horizon.)
 
